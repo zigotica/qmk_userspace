@@ -2,6 +2,23 @@
 
 This is a template repository which allows for an external set of QMK keymaps to be defined and compiled. This is useful for users who want to maintain their own keymaps without having to fork the main QMK repository.
 
+## zigotica userspace installation
+
+In a new computer:
+
+```
+brew install qmk qmk-toolbox
+cd path/to/personal/projects
+git clone git@github.com:zigotica/qmk_userspace.git
+cd qmk_userspace
+qmk config user.overlay_dir="$(realpath .)"
+qmk setup
+```
+
+The setup process should detect the userspace data and set it all up for you. You can now compile your keyboard/s using the keymaps defined in your userspace.
+
+Rest of the README is the same as the main QMK repository.
+
 ## Howto configure your build targets
 
 1. Run the normal `qmk setup` procedure if you haven't already done so -- see [QMK Docs](https://docs.qmk.fm/#/newbs) for details.
