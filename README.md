@@ -1,21 +1,40 @@
 # QMK Userspace
 
-This is a template repository which allows for an external set of QMK keymaps to be defined and compiled. This is useful for users who want to maintain their own keymaps without having to fork the main QMK repository.
+This is a template repository which allows for an external set of QMK keymaps to be defined and compiled. This is useful for users who want to maintain their own keymaps without having to fork the main QMK repository. Following 3 sections were added to this template by zigotica.
 
-## zigotica userspace installation
+## userspace installation
 
-In a new computer:
+In a new computer, install dependencies before running the setup (qmk-toolbox is optional):
 
 ```
-brew install qmk qmk-toolbox
-cd path/to/personal/projects
+brew install qmk qmk-toolbox avr-gcc arm-gcc-bin
+cd ~/Documents/personal
 git clone git@github.com:zigotica/qmk_userspace.git
-cd qmk_userspace
-qmk config user.overlay_dir="$(realpath .)"
-qmk setup
+qmk config user.overlay_dir="$(realpath qmk_userspace)"
+qmk setup -H ~/Documents/personal/qmk_firmware
 ```
 
-The setup process should detect the userspace data and set it all up for you. You can now compile your keyboard/s using the keymaps defined in your userspace.
+The setup process should detect the userspace data and set it all up for you.
+
+## compile keyboards
+
+You can now compile your keyboard/s using the keymaps defined in your userspace, for instance:
+
+```
+qmk compile -kb z34 -km zigotica
+```
+
+The files will be placed in ~/Documents/personal/qmk_firmware/ as *.hex files.
+
+## flash keyboards
+
+You can now flash your keyboard/s directly from the terminal, using:
+
+```
+qmk flash -kb z34 -km zigotica
+```
+
+If this method fails, try running the QMK Toolbox app instead.
 
 Rest of the README is the same as the main QMK repository.
 
