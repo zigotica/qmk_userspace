@@ -20,11 +20,25 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
-    [BASE] = LAYOUT_wrapper(
+    [_PRSTEN] = LAYOUT_wrapper(
+        _______,    _PRSTEN_L1,                                         _PRSTEN_R1,      _______,
+        _______,    _PRSTEN_L2,                                         _PRSTEN_R2,      _______,
+        _______,    _PRSTEN_L3, _______, _______,   _______, _______,   _PRSTEN_R3,      _______,
+        _______, _______, _PRSTEN_LT, _______,   _______, _PRSTEN_RT, _______, _______
+    ),
+
+    [_STENAI] = LAYOUT_wrapper(
       _______,    _STENAI_L1,                                         _STENAI_R1,      _______,
       _______,    _STENAI_L2,                                         _STENAI_R2,      _______,
       _______,    _STENAI_L3, _______, _______,   _______, _______,   _STENAI_R3,      _______,
          _______, _______, _STENAI_LT, _______,   _______, _STENAI_RT, _______, _______
+    ),
+
+    [_QWERTY] = LAYOUT_wrapper(
+      _______,    _QWERTY_L1,                                         _QWERTY_R1,      _______,
+      _______,    _QWERTY_L2,                                         _QWERTY_R2,      _______,
+      _______,    _QWERTY_L3, _______, _______,   _______, _______,   _QWERTY_R3,      _______,
+         _______, _______, _QWERTY_LT, _______,   _______, _QWERTY_RT, _______, _______
     ),
 
     [_NUM] = LAYOUT_wrapper(
@@ -54,5 +68,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       _______,    ____FN_L3, _______, _______,   _______, _______,   ____FN_R3,      _______,
          _______, _______, ____FN_LT, _______,   _______, ____FN_RT, _______, _______
     ),
+
+
+    [_SETUP] = LAYOUT_wrapper(
+      _______,    ____SETUP_L1,                                         ____SETUP_R1,      _______,
+      _______,    ____SETUP_L2,                                         ____SETUP_R2,      _______,
+      _______,    ____SETUP_L3, _______, _______,   _______, _______,   ____SETUP_R3,      _______,
+         _______, _______, ____SETUP_LT, _______,   _______, ____SETUP_RT, _______, _______
+    ),
 };
 
+layer_state_t layer_state_set_user(layer_state_t state) {
+  return update_tri_layer_state(state, _NUM, _FN, _SETUP);
+}

@@ -25,3 +25,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // see users/zigotica/zigotica.h
 #define ORTHOLINEAR_KEYBOARD
 
+// QK_MAKE requires this
+#define ENABLE_COMPILE_KEYCODE

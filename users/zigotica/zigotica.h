@@ -18,11 +18,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #if defined(SPLIT_KEYBOARD) || defined(ORTHOLINEAR_KEYBOARD)
 enum userspace_layers {
-    BASE = 0,
+    _PRSTEN = 0,
+    _STENAI,
+    _QWERTY,
     _NUM,
     _NAV,
     _SYM,
     _FN,
+    _SETUP,
 };
 #else
 enum userspace_layers {

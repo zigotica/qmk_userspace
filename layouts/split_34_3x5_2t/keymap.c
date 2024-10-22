@@ -19,11 +19,25 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define LAYOUT_wrapper(...) LAYOUT(__VA_ARGS__)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-    [BASE] = LAYOUT_wrapper(
+    [_PRSTEN] = LAYOUT_wrapper(
+       _PRSTEN_L1,    _PRSTEN_R1,
+       _PRSTEN_L2,    _PRSTEN_R2,
+       _PRSTEN_L3,    _PRSTEN_R3,
+       _PRSTEN_LT,    _PRSTEN_RT
+    ),
+
+    [_STENAI] = LAYOUT_wrapper(
        _STENAI_L1,    _STENAI_R1,
        _STENAI_L2,    _STENAI_R2,
        _STENAI_L3,    _STENAI_R3,
        _STENAI_LT,    _STENAI_RT
+    ),
+
+    [_QWERTY] = LAYOUT_wrapper(
+       _QWERTY_L1,    _QWERTY_R1,
+       _QWERTY_L2,    _QWERTY_R2,
+       _QWERTY_L3,    _QWERTY_R3,
+       _QWERTY_LT,    _QWERTY_RT
     ),
 
     [_NUM] = LAYOUT_wrapper(
@@ -53,5 +67,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       ____FN_L3,     ____FN_R3,
       ____FN_LT,     ____FN_RT
     ),
+
+    [_SETUP] = LAYOUT_wrapper(
+      ____SETUP_L1,     ____SETUP_R1,
+      ____SETUP_L2,     ____SETUP_R2,
+      ____SETUP_L3,     ____SETUP_R3,
+      ____SETUP_LT,     ____SETUP_RT
+    ),
 };
 
+layer_state_t layer_state_set_user(layer_state_t state) {
+  return update_tri_layer_state(state, _NUM, _FN, _SETUP);
+}

@@ -24,3 +24,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define PERMISSIVE_HOLD
 #define QUICK_TAP_TERM 0
 
+// QK_MAKE requires this
+#define ENABLE_COMPILE_KEYCODE
