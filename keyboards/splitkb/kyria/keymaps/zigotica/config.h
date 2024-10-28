@@ -42,5 +42,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   #define ENCODER_DIRECTION_FLIP
 #endif
 
+// TAKE COMBOS KEY POSITIONS FROM LAYER 0 (PRSTEN)
+#define COMBO_ONLY_FROM_LAYER 0
+
 // QK_MAKE requires this
 #define ENABLE_COMPILE_KEYCODE
