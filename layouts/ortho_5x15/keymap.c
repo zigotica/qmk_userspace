@@ -29,13 +29,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define ____TARRS      _______, KC_UP,   _______
 #define ____BARRS      KC_LEFT, KC_DOWN, KC_RIGHT
 #define ____LORTH      ____LMODS, KC_MINS
-#define ____RORTH      KC_BSPC, KC_SCLN, KC_BSLS, KC_SLSH
+#define ____RORTH      KC_BSPC, KC_SCLN, KC_BSLS, ZK_BRC
 
 #define LAYOUT_wrapper(...) LAYOUT(__VA_ARGS__)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_PRSTEN] = LAYOUT_wrapper(
-       KC_ESC,    ____NUM15,     _BLANK_3,    ____NUM60,     KC_DEL, 
+       KC_ESC,    ____NUM15,     _BLANK_3,    ____NUM60,     KC_DEL,
        KC_TAB,    _PRSTEN_L1,    _BLANK_3,    _PRSTEN_R1,    _______,
        KC_EQL,    _PRSTEN_L2,    _BLANK_3,    _PRSTEN_R2,    KC_ENT,
        KC_LSFT,   _PRSTEN_L3,    ____TARRS,   _PRSTEN_R3,    KC_RSFT,

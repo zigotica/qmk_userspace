@@ -19,6 +19,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     #define ZK_MEDIA TD(0)
     #define ZK_SEMI TD(1)
     #define ZK_COLON TD(2)
-    #define ZK_BRC TD(3)
-    #define ZK_PRN TD(4)
+    #define ZK_PRN TD(3)
+    #define ZK_BRC TD(4)
+    #define ZK_CRL TD(5)
 #endif

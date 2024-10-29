@@ -40,38 +40,41 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /*
  * PRSTEN Layer
- * Apple: meta: 󰘳
- *        alt:  󰘵
- *        ctrl: 󰘴
+ * Includes combos used in all layers, see COMBO_ONLY_FROM_LAYER in config.h
+ * Apple: meta:  ⌘
+ *        alt:   ⌥
+ *        shift: ⇧
+ *        ctrl:  󰘴
  *
  *   ╔═══════╦═══════╦═══════╦═══════╦═══════╗         ╔═══════╦═══════╦═══════╦═══════╦═══════╗
  *   ║       ║       ║       ║       ║       ║         ║       ║       ║       ║       ║       ║
  *   ║  ` ~  ║   W   ║   C   ║   D   ║   F   ║         ║   Q   ║   L   ║   U   ║   Y   ║  ' "  ║
  *   ║       ║       ║       ║       ║       ║         ║       ║       ║       ║       ║       ║
- *   ╠═══════╬═══════╬═══════╬═══════╬═══════╣         ╠═══════╬═══════╬═══════╬═══════╬═══════╣
+ *   ╠═══════╬══ ( ══╬══ [ ══╬══ { ══╬═══════╣         ╠═══════╬══ - ══╬══ + ══╬══ = ══╬═══════╣
  *   ║       ║       ║       ║       ║       ║         ║       ║       ║       ║       ║       ║
- *   ║   P   ║   R   ║   S   ║   T   ║   G   ║         ║   M   ║   N   ║   A   ║   I   ║   O   ║
- *   ║  alt  ║ ctrl  ║ shft  ║ meta  ║       ║         ║       ║  meta ║  shft ║ ctrl  ║  alt  ║
- *   ╠═══════╬═══════╬═══════╬═══════╬═══════╣         ╠═══════╬═══════╬═══════╬═══════╬═══════╣
- *   ║       ║       ║       ║       ║       ║         ║       ║       ║       ║       ║       ║
- *   ║   X   ║   H   ║   V   ║   B   ║  [ {  ║         ║  , <  ║   J   ║   K   ║   Z   ║   . > ║
- *   ║       ║       ║       ║       ║ TD ]} ║         ║  TD ; ║       ║       ║       ║  TD : ║
- *   ╚═══════╩═══════╩═══════╬═══════╬═══════╣         ╠═══════╬═══════╬═══════╩═══════╩═══════╝
- *                           ║       ║       ║         ║       ║       ║
- *                           ║  TAB  ║  SPC  ║         ║   E   ║ INTRO ║
- *                           ║  num  ║  nav  ║         ║  sym  ║   fn  ║
- *                           ╚═══════╩═══════╝         ╚═══════╩═══════╝
- *
+ *   ║   P   ║   R   ║   S   ║   T   ║   G   ║      ┌───▫  M   ║   N   ║   A   ║   I   ║   O   ║
+ *   ║  alt  ║ ctrl  ║ shft ▫║ meta  ║       ║      │  ║       ║  meta ║▫ shft ║ ctrl  ║  alt  ║
+ *   ╠═══════╬═══════╬══════│╬═══════╬═══════╣      │  ╠═══════╬══ / ══╬│═ * ══╬═══════╬═══════╣
+ *   ║       ║       ║      │║       ║       ║      │  ║       ║       ║│      ║       ║       ║
+ *   ║   X   ║   H   ║   V  │║   B   ║  / ?  ║    email║  , <  ║   J   ║│  K   ║   Z   ║  . >  ║
+ *   ║       ║       ║      │║       ║       ║      │  ║  ; td ║       ║│      ║       ║  : td ║
+ *   ╚═══════╩═══════╩══════│╬═══════╬═══════╣      │  ╠═══════╬═══════╬│══════╩═══════╩═══════╝
+ *                          │║       ║       ║      │  ║       ║       ║│
+ *                          │║  TAB  ║  SPC  ║      └───▫  E   ║ INTRO ║│
+ *                          │║  num  ║  nav  ║         ║  sym  ║   fn  ║│
+ *                          │╚═══════╩═══════╝         ╚═══════╩═══════╝│
+ *                          │   └── esc ──┘                             │
+ *                          └────────────────── caps ───────────────────┘
  */
-#define _PRSTEN_L1      KC_GRV,           KC_W,            KC_C,          KC_D,             KC_F
-#define _PRSTEN_L2      LALT_T(KC_P),     LCTL_T(KC_R),    LSFT_T(KC_S),  LGUI_T(KC_T),     KC_G
-#define _PRSTEN_L3      KC_X,             KC_H,            KC_V,          KC_B,             ZK_BRC
-#define _PRSTEN_LT      LT(_NUM, KC_TAB), LT(_NAV, KC_SPC)
+#define _PRSTEN_L1   KC_GRV,           KC_W,            KC_C,          KC_D,          KC_F
+#define _PRSTEN_L2   LALT_T(KC_P),     LCTL_T(KC_R),    LSFT_T(KC_S),  LGUI_T(KC_T),  KC_G
+#define _PRSTEN_L3   KC_X,             KC_H,            KC_V,          KC_B,          KC_SLSH
+#define _PRSTEN_LT   LT(_NUM, KC_TAB), LT(_NAV, KC_SPC)
 
-#define _PRSTEN_R1      KC_Q,             KC_L,            KC_U,          KC_Y,             KC_QUOT
-#define _PRSTEN_R2      KC_M,             RGUI_T(KC_N),    RSFT_T(KC_A),  RCTL_T(KC_I),     RALT_T(KC_O)
-#define _PRSTEN_R3      ZK_SEMI,          KC_J,            KC_K,          KC_Z,             ZK_COLON
-#define _PRSTEN_RT      LT(_SYM, KC_E),   LT(_FN, KC_ENT)
+#define _PRSTEN_R1   KC_Q,             KC_L,            KC_U,          KC_Y,          KC_QUOT
+#define _PRSTEN_R2   KC_M,             RGUI_T(KC_N),    RSFT_T(KC_A),  RCTL_T(KC_I),  RALT_T(KC_O)
+#define _PRSTEN_R3   ZK_SEMI,          KC_J,            KC_K,          KC_Z,          ZK_COLON
+#define _PRSTEN_RT   LT(_SYM, KC_E),   LT(_FN, KC_ENT)
 
 /*
  * STENAI Features:
@@ -105,8 +108,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *   ║  alt  ║ ctrl  ║ shft  ║ meta  ║       ║         ║       ║  meta ║  shft ║ ctrl  ║  alt  ║
  *   ╠═══════╬═══════╬═══════╬═══════╬═══════╣         ╠═══════╬═══════╬═══════╬═══════╬═══════╣
  *   ║       ║       ║       ║       ║       ║         ║       ║       ║       ║       ║       ║
- *   ║   X   ║   C   ║   V   ║   B   ║  [ {  ║         ║  , <  ║   J   ║   K   ║   Z   ║   . > ║
- *   ║       ║       ║       ║       ║ TD ]} ║         ║  TD ; ║       ║       ║       ║  TD : ║
+ *   ║   X   ║   C   ║   V   ║   B   ║  / ?  ║         ║  , <  ║   J   ║   K   ║   Z   ║  . >  ║
+ *   ║       ║       ║       ║       ║       ║         ║  ; td ║       ║       ║       ║  : td ║
  *   ╚═══════╩═══════╩═══════╬═══════╬═══════╣         ╠═══════╬═══════╬═══════╩═══════╩═══════╝
  *                           ║       ║       ║         ║       ║       ║
  *                           ║  TAB  ║  SPC  ║         ║   E   ║ INTRO ║
@@ -114,15 +117,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *                           ╚═══════╩═══════╝         ╚═══════╩═══════╝
  *
  */
-#define _STENAI_L1      KC_GRV,           KC_W,            KC_D,          KC_P,             KC_F
-#define _STENAI_L2      LALT_T(KC_H),     LCTL_T(KC_R),    LSFT_T(KC_S),  LGUI_T(KC_T),     KC_G
-#define _STENAI_L3      KC_X,             KC_C,            KC_V,          KC_B,             ZK_BRC
-#define _STENAI_LT      LT(_NUM, KC_TAB), LT(_NAV, KC_SPC)
+#define _STENAI_L1   KC_GRV,           KC_W,            KC_D,          KC_P,          KC_F
+#define _STENAI_L2   LALT_T(KC_H),     LCTL_T(KC_R),    LSFT_T(KC_S),  LGUI_T(KC_T),  KC_G
+#define _STENAI_L3   KC_X,             KC_C,            KC_V,          KC_B,          KC_SLSH
+#define _STENAI_LT   LT(_NUM, KC_TAB), LT(_NAV, KC_SPC)
 
-#define _STENAI_R1      KC_Q,             KC_L,            KC_U,          KC_Y,             KC_QUOT
-#define _STENAI_R2      KC_M,             RGUI_T(KC_N),    RSFT_T(KC_A),  RCTL_T(KC_I),     RALT_T(KC_O)
-#define _STENAI_R3      ZK_SEMI,          KC_J,            KC_K,          KC_Z,             ZK_COLON
-#define _STENAI_RT      LT(_SYM, KC_E),   LT(_FN, KC_ENT)
+#define _STENAI_R1   KC_Q,             KC_L,            KC_U,          KC_Y,          KC_QUOT
+#define _STENAI_R2   KC_M,             RGUI_T(KC_N),    RSFT_T(KC_A),  RCTL_T(KC_I),  RALT_T(KC_O)
+#define _STENAI_R3   ZK_SEMI,          KC_J,            KC_K,          KC_Z,          ZK_COLON
+#define _STENAI_RT   LT(_SYM, KC_E),   LT(_FN, KC_ENT)
 
 /*
  * QWERTY Layer
@@ -141,7 +144,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *   ╠═══════╬═══════╬═══════╬═══════╬═══════╣         ╠═══════╬═══════╬═══════╬═══════╬═══════╣
  *   ║       ║       ║       ║       ║       ║         ║       ║       ║       ║       ║       ║
  *   ║   Z   ║   X   ║   C   ║   V   ║   B   ║         ║   N   ║   M   ║  , <  ║  . >  ║  ` ~  ║
- *   ║       ║       ║       ║       ║       ║         ║       ║       ║  TD ; ║  TD : ║       ║
+ *   ║       ║       ║       ║       ║       ║         ║       ║       ║  ; td ║  : td ║       ║
  *   ╚═══════╩═══════╩═══════╬═══════╬═══════╣         ╠═══════╬═══════╬═══════╩═══════╩═══════╝
  *                           ║       ║       ║         ║       ║       ║
  *                           ║  TAB  ║  SPC  ║         ║  SPC  ║ INTRO ║
@@ -150,15 +153,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
 
-#define _QWERTY_L1      KC_Q,    KC_W,    KC_E,    KC_R,    KC_T
-#define _QWERTY_L2      LALT_T(KC_A),     LCTL_T(KC_S),    LSFT_T(KC_D),  LGUI_T(KC_F),     KC_G
-#define _QWERTY_L3      KC_Z,    KC_X,    KC_C,    KC_V,    KC_B
-#define _QWERTY_LT      LT(_NUM, KC_TAB), LT(_NAV, KC_SPC)
+#define _QWERTY_L1   KC_Q,    KC_W,    KC_E,    KC_R,    KC_T
+#define _QWERTY_L2   LALT_T(KC_A),     LCTL_T(KC_S),    LSFT_T(KC_D),  LGUI_T(KC_F),  KC_G
+#define _QWERTY_L3   KC_Z,    KC_X,    KC_C,    KC_V,    KC_B
+#define _QWERTY_LT   LT(_NUM, KC_TAB), LT(_NAV, KC_SPC)
 
-#define _QWERTY_R1      KC_Y,    KC_U,    KC_I,    KC_O,    KC_P
-#define _QWERTY_R2      KC_H,    RGUI_T(KC_J),    RSFT_T(KC_K),  RCTL_T(KC_L), RALT_T(KC_QUOT)
-#define _QWERTY_R3      KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_GRV
-#define _QWERTY_RT      LT(_SYM, KC_SPC), LT(_FN, KC_ENT)
+#define _QWERTY_R1   KC_Y,    KC_U,    KC_I,    KC_O,    KC_P
+#define _QWERTY_R2   KC_H,    RGUI_T(KC_J),    RSFT_T(KC_K),  RCTL_T(KC_L), RALT_T(KC_QUOT)
+#define _QWERTY_R3   KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_GRV
+#define _QWERTY_RT   LT(_SYM, KC_SPC), LT(_FN, KC_ENT)
 
 /*
  * NUM Layer
@@ -167,13 +170,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *   ║       ║       ║       ║       ║       ║         ║       ║       ║       ║       ║       ║
  *   ║       ║   -   ║   +   ║   =   ║       ║         ║       ║   7   ║   8   ║   9   ║       ║
  *   ║       ║       ║       ║       ║       ║         ║       ║       ║       ║       ║       ║
- *   ╠═══════╬═══════╬═══════╬═══════╬═══════╣         ╠═══════╬═══════╬═══════╬═══════╬═══════╣
+ *   ╠═══════╬═══════╬═══════╬═══════╬═══════╣         ╠═══════╬══ - ══╬══ + ══╬══ = ══╬═══════╣
  *   ║       ║       ║       ║       ║       ║         ║       ║       ║       ║       ║       ║
  *   ║       ║       ║       ║       ║       ║         ║       ║   1   ║   2   ║   3   ║       ║
  *   ║       ║       ║       ║       ║       ║         ║       ║       ║       ║       ║       ║
- *   ╠═══════╬═══════╬═══════╬═══════╬═══════╣         ╠═══════╬═══════╬═══════╬═══════╬═══════╣
+ *   ╠═══════╬═══════╬═══════╬═══════╬═══════╣         ╠═══════╬══ / ══╬══ * ══╬═══════╬═══════╣
  *   ║       ║       ║       ║       ║       ║         ║       ║       ║       ║       ║       ║
- *   ║       ║       ║   /   ║   *   ║       ║         ║       ║   4   ║   5   ║   6   ║       ║
+ *   ║       ║   /   ║   *   ║       ║       ║         ║       ║   4   ║   5   ║   6   ║       ║
  *   ║       ║       ║       ║       ║       ║         ║       ║       ║       ║       ║       ║
  *   ╚═══════╩═══════╩═══════╬═══════╬═══════╣         ╠═══════╬═══════╬═══════╩═══════╩═══════╝
  *                           ║▒▒▒▒▒▒▒║       ║         ║       ║       ║
@@ -182,15 +185,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *                           ╚═══════╩═══════╝         ╚═══════╩═══════╝
  *
  */
-#define ____NUM_L1      _______, KC_MINS, KC_PLUS, KC_EQL,  _______
-#define ____NUM_L2      _BLANK_ROW
-#define ____NUM_L3      _______, _______, KC_SLSH, KC_ASTR, _______
-#define ____NUM_LT      _BLANK_THUMB
+#define ____NUM_L1   _______, KC_MINS, KC_PLUS, KC_EQL,  _______
+#define ____NUM_L2   _BLANK_ROW
+#define ____NUM_L3   _______, KC_SLSH, KC_ASTR, _______, _______
+#define ____NUM_LT   _BLANK_THUMB
 
-#define ____NUM_R1      _______, KC_7,    KC_8,    KC_9,    _______
-#define ____NUM_R2      _______, KC_1,    KC_2,    KC_3,    _______
-#define ____NUM_R3      _______, KC_4,    KC_5,    KC_6,    _______
-#define ____NUM_RT      KC_0,    KC_BSPC
+#define ____NUM_R1   _______, KC_7,    KC_8,    KC_9,    _______
+#define ____NUM_R2   _______, KC_1,    KC_2,    KC_3,    _______
+#define ____NUM_R3   _______, KC_4,    KC_5,    KC_6,    _______
+#define ____NUM_RT   KC_0,    KC_BSPC
 
 /*
  * NAVIGATION Layer
@@ -218,30 +221,30 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *                           ║       ║▒▒▒▒▒▒▒║         ║       ║       ║
  *                           ╚═══════╩═══════╝         ╚═══════╩═══════╝
  */
-#define ____NAV_L1      _BLANK_ROW
-#define ____NAV_L2      _BLANK_ROW
-#define ____NAV_L3      _BLANK_ROW
-#define ____NAV_LT      _BLANK_THUMB
+#define ____NAV_L1   _BLANK_ROW
+#define ____NAV_L2   _BLANK_ROW
+#define ____NAV_L3   _BLANK_ROW
+#define ____NAV_LT   _BLANK_THUMB
 
-#define ____NAV_R1      KC_WH_D, KC_HOME, KC_UP,   KC_PGUP, _______
-#define ____NAV_R2      KC_WH_U, KC_LEFT, KC_DOWN, KC_RGHT, _______
-#define ____NAV_R3      _______, KC_END,  ZK_MEDIA, KC_PGDN, _______
-#define ____NAV_RT      _______, KC_DEL
+#define ____NAV_R1   KC_WH_D, KC_HOME, KC_UP,   KC_PGUP, _______
+#define ____NAV_R2   KC_WH_U, KC_LEFT, KC_DOWN, KC_RGHT, _______
+#define ____NAV_R3   _______, KC_END,  ZK_MEDIA, KC_PGDN, _______
+#define ____NAV_RT   _______, KC_DEL
 
 /*
  * SYMBOLS Layer
  *
  *   ╔═══════╦═══════╦═══════╦═══════╦═══════╗         ╔═══════╦═══════╦═══════╦═══════╦═══════╗
  *   ║       ║       ║       ║       ║       ║         ║       ║       ║       ║       ║       ║
- *   ║   %   ║   &   ║   ?   ║   |   ║   !   ║         ║       ║       ║       ║       ║       ║
+ *   ║       ║   ^   ║   #   ║   $   ║   €   ║         ║       ║   |   ║   &   ║   %   ║       ║
  *   ║       ║       ║       ║       ║       ║         ║       ║       ║       ║       ║       ║
- *   ╠═══════╬═══════╬═══════╬═══════╬═══════╣         ╠═══════╬═══════╬═══════╬═══════╬═══════╣
+ *   ╠═══════╬══ ( ══╬══ [ ══╬══ { ══╬═══════╣         ╠═══════╬══ - ══╬══ + ══╬══ = ══╬═══════╣
  *   ║       ║       ║       ║       ║       ║         ║       ║       ║       ║       ║       ║
- *   ║   #   ║   @   ║   :   ║   ;   ║   $   ║         ║       ║       ║       ║       ║       ║
+ *   ║   `   ║   "   ║   :   ║   ;   ║   °   ║         ║   ·   ║   _   ║   ,   ║   .   ║   '   ║
  *   ║       ║       ║       ║       ║       ║         ║       ║       ║       ║       ║       ║
- *   ╠═══════╬═══════╬═══════╬═══════╬═══════╣         ╠═══════╬═══════╬═══════╬═══════╬═══════╣
+ *   ╠═══════╬═══════╬═══════╬═══════╬═══════╣         ╠═══════╬══ / ══╬══ * ══╬═══════╬═══════╣
  *   ║       ║       ║       ║       ║       ║         ║       ║       ║       ║       ║       ║
- *   ║   (   ║   ~   ║   /   ║   \   ║   ^   ║         ║       ║       ║       ║       ║       ║
+ *   ║       ║   @   ║   !   ║   ?   ║   ¿   ║         ║       ║   \   ║   <   ║   >   ║       ║
  *   ║       ║       ║       ║       ║       ║         ║       ║       ║       ║       ║       ║
  *   ╚═══════╩═══════╩═══════╬═══════╬═══════╣         ╠═══════╬═══════╬═══════╩═══════╩═══════╝
  *                           ║       ║       ║         ║▒▒▒▒▒▒▒║       ║
@@ -249,15 +252,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *                           ║       ║       ║         ║▒▒▒▒▒▒▒║       ║
  *                           ╚═══════╩═══════╝         ╚═══════╩═══════╝
  */
-#define ____SYM_L1      KC_PERC, KC_AMPR, KC_QUES, KC_PIPE, KC_EXLM
-#define ____SYM_L2      KC_HASH, KC_AT,   KC_COLN, KC_SCLN, KC_DLR
-#define ____SYM_L3      ZK_PRN,  KC_TILD, KC_SLSH, KC_BSLS, KC_CIRC
-#define ____SYM_LT      _______, KC_ESC
+#define ____SYM_L1   _______, KC_CIRC, KC_HASH, KC_DLR, A(S(KC_2))
+#define ____SYM_L2   _______, KC_AT,   KC_COLN, KC_SCLN, A(S(KC_8))
+#define ____SYM_L3   _______, _______, KC_EXLM, KC_QUES, A(KC_QUES)
+#define ____SYM_LT   _______, KC_ESC
 
-#define ____SYM_R1      _BLANK_ROW
-#define ____SYM_R2      _BLANK_ROW
-#define ____SYM_R3      _BLANK_ROW
-#define ____SYM_RT      _BLANK_THUMB
+#define ____SYM_R1   _______, KC_PIPE, KC_AMPR, KC_PERC, _______
+#define ____SYM_R2   A(S(KC_9)), KC_UNDS, KC_COMM, KC_DOT, KC_DQUO
+#define ____SYM_R3   _______, KC_BSLS, KC_LT,   KC_GT,  _______
+#define ____SYM_RT   _BLANK_THUMB
 
 /*
  * FUNCTION KEYS Layer
@@ -280,47 +283,47 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *                           ║       ║       ║         ║       ║▒▒▒▒▒▒▒║
  *                           ╚═══════╩═══════╝         ╚═══════╩═══════╝
  */
-#define ____FN_L1       _BLANK_ROW
-#define ____FN_L2       _BLANK_ROW
-#define ____FN_L3       _BLANK_ROW
-#define ____FN_LT       _______, KC_ESC
+#define ____FN_L1    _BLANK_ROW
+#define ____FN_L2    _BLANK_ROW
+#define ____FN_L3    _BLANK_ROW
+#define ____FN_LT    _______, KC_ESC
 
-#define ____FN_R1       _______,  KC_F7,  KC_F8,  KC_F9,  KC_F10
-#define ____FN_R2       _______,  KC_F1,  KC_F2,  KC_F3,  KC_F11
-#define ____FN_R3       _______,  KC_F4,  KC_F5,  KC_F6,  KC_F12
-#define ____FN_RT       _BLANK_THUMB
+#define ____FN_R1    _______,  KC_F7,  KC_F8,  KC_F9,  KC_F10
+#define ____FN_R2    _______,  KC_F1,  KC_F2,  KC_F3,  KC_F11
+#define ____FN_R3    _______,  KC_F4,  KC_F5,  KC_F6,  KC_F12
+#define ____FN_RT    _BLANK_THUMB
 
 
 /*
  * SETUP Layer
  *
- *   ╔═══════╦═══════╦═══════╦═══════╦═══════╗         ╔═══════╦═══════╦═══════╦═══════╦═══════╗
- *   ║       ║       ║       ║       ║       ║         ║       ║       ║       ║       ║       ║
- *   ║       ║       ║       ║       ║       ║         ║       ║       ║STENAI ║       ║       ║
- *   ║       ║       ║       ║       ║       ║         ║       ║       ║       ║       ║       ║
- *   ╠═══════╬═══════╬═══════╬═══════╬═══════╣         ╠═══════╬═══════╬═══════╬═══════╬═══════╣
- *   ║       ║       ║       ║       ║       ║         ║       ║       ║       ║       ║       ║
- *   ║       ║       ║       ║       ║       ║         ║       ║       ║PRSTEN ║       ║       ║
- *   ║       ║       ║       ║       ║       ║         ║       ║       ║       ║       ║       ║
- *   ╠═══════╬═══════╬═══════╬═══════╬═══════╣         ╠═══════╬═══════╬═══════╬═══════╬═══════╣
- *   ║       ║       ║       ║       ║       ║         ║       ║       ║       ║       ║       ║
- *   ║       ║       ║       ║       ║ BOOT  ║         ║ MAKE  ║       ║QWERTY ║       ║       ║
- *   ║       ║       ║       ║       ║       ║         ║       ║       ║       ║       ║       ║
- *   ╚═══════╩═══════╩═══════╬═══════╬═══════╣         ╠═══════╬═══════╬═══════╩═══════╩═══════╝
+ *   ╔═══════╦═══════╦═══════╦═══════╦═══════╗         ╔═══════╦═══════╦════════╦═══════╦═══════╗
+ *   ║       ║       ║       ║       ║       ║         ║       ║       ║        ║       ║       ║
+ *   ║       ║       ║       ║       ║       ║         ║       ║       ║ STENAI ║       ║       ║
+ *   ║       ║       ║       ║       ║       ║         ║       ║       ║        ║       ║       ║
+ *   ╠═══════╬═══════╬═══════╬═══════╬═══════╣         ╠═══════╬═══════╬════════╬═══════╬═══════╣
+ *   ║       ║       ║       ║       ║       ║         ║       ║       ║        ║       ║       ║
+ *   ║       ║       ║       ║       ║       ║         ║       ║       ║ PRSTEN ║       ║       ║
+ *   ║       ║       ║       ║       ║       ║         ║       ║       ║        ║       ║       ║
+ *   ╠═══════╬═══════╬═══════╬═══════╬═══════╣         ╠═══════╬═══════╬════════╬═══════╬═══════╣
+ *   ║       ║       ║       ║       ║       ║         ║       ║       ║        ║       ║       ║
+ *   ║       ║       ║       ║       ║ BOOT  ║         ║ MAKE  ║       ║ QWERTY ║       ║       ║
+ *   ║       ║       ║       ║       ║       ║         ║       ║       ║        ║       ║       ║
+ *   ╚═══════╩═══════╩═══════╬═══════╬═══════╣         ╠═══════╬═══════╬════════╩═══════╩═══════╝
  *                           ║▒▒▒▒▒▒▒║       ║         ║       ║▒▒▒▒▒▒▒║
  *                           ║▒▒▒▒▒▒▒║       ║         ║       ║▒▒▒▒▒▒▒║
  *                           ║▒▒▒▒▒▒▒║       ║         ║       ║▒▒▒▒▒▒▒║
  *                           ╚═══════╩═══════╝         ╚═══════╩═══════╝
  */
-#define ____SETUP_L1       _BLANK_ROW
-#define ____SETUP_L2       _BLANK_ROW
-#define ____SETUP_L3       _______, _______, _______, _______, QK_BOOT
-#define ____SETUP_LT       _BLANK_THUMB
+#define ____SETUP_L1    _BLANK_ROW
+#define ____SETUP_L2    _BLANK_ROW
+#define ____SETUP_L3    _______, _______, _______, _______, QK_BOOT
+#define ____SETUP_LT    _BLANK_THUMB
 
-#define ____SETUP_R1       _______, _______, STENAI, _______, _______
-#define ____SETUP_R2       _______, _______, PRSTEN, _______, _______
-#define ____SETUP_R3       QK_MAKE, _______, QWERTY, _______, _______
-#define ____SETUP_RT       _BLANK_THUMB
+#define ____SETUP_R1    _______, _______, STENAI, _______, _______
+#define ____SETUP_R2    _______, _______, PRSTEN, _______, _______
+#define ____SETUP_R3    QK_MAKE, _______, QWERTY, _______, _______
+#define ____SETUP_RT    _BLANK_THUMB
 
 
 // clang-format on

@@ -9,3 +9,6 @@
 *.hex
 *.bin
 *.uf2
+
+# c lang files
+.ccls-cache
