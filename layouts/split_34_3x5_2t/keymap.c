@@ -40,18 +40,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        _QWERTY_LT,    _QWERTY_RT
     ),
 
+    [_FN] = LAYOUT_wrapper(
+      ____FN_L1,     ____FN_R1,
+      ____FN_L2,     ____FN_R2,
+      ____FN_L3,     ____FN_R3,
+      ____FN_LT,     ____FN_RT
+    ),
+
     [_NUM] = LAYOUT_wrapper(
       ____NUM_L1,     ____NUM_R1,
       ____NUM_L2,     ____NUM_R2,
       ____NUM_L3,     ____NUM_R3,
       ____NUM_LT,     ____NUM_RT
-    ),
-
-    [_NAV] = LAYOUT_wrapper(
-      ____NAV_L1,     ____NAV_R1,
-      ____NAV_L2,     ____NAV_R2,
-      ____NAV_L3,     ____NAV_R3,
-      ____NAV_LT,     ____NAV_RT
     ),
 
     [_SYM] = LAYOUT_wrapper(
@@ -61,11 +61,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       ____SYM_LT,     ____SYM_RT
     ),
 
-    [_FN] = LAYOUT_wrapper(
-      ____FN_L1,     ____FN_R1,
-      ____FN_L2,     ____FN_R2,
-      ____FN_L3,     ____FN_R3,
-      ____FN_LT,     ____FN_RT
+    [_NAV] = LAYOUT_wrapper(
+      ____NAV_L1,     ____NAV_R1,
+      ____NAV_L2,     ____NAV_R2,
+      ____NAV_L3,     ____NAV_R3,
+      ____NAV_LT,     ____NAV_RT
     ),
 
     [_SETUP] = LAYOUT_wrapper(

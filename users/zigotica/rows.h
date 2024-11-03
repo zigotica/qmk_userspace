@@ -61,7 +61,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *   ╚═══════╩═══════╩══════│╬═══════╬═══════╣      │  ╠═══════╬═══════╬│══════╩═══════╩═══════╝
  *                          │║       ║       ║      │  ║       ║       ║│
  *                          │║  TAB  ║  SPC  ║      └───▫  E   ║ INTRO ║│
- *                          │║  num  ║  nav  ║         ║  sym  ║   fn  ║│
+ *                          │║   fn  ║  num  ║         ║  sym  ║  nav  ║│
  *                          │╚═══════╩═══════╝         ╚═══════╩═══════╝│
  *                          │   └── esc ──┘                             │
  *                          └────────────────── caps ───────────────────┘
@@ -69,12 +69,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define _PRSTEN_L1   KC_GRV,           KC_W,            KC_C,          KC_D,          KC_F
 #define _PRSTEN_L2   LALT_T(KC_P),     LCTL_T(KC_R),    LSFT_T(KC_S),  LGUI_T(KC_T),  KC_G
 #define _PRSTEN_L3   KC_X,             KC_H,            KC_V,          KC_B,          KC_SLSH
-#define _PRSTEN_LT   LT(_NUM, KC_TAB), LT(_NAV, KC_SPC)
+#define _PRSTEN_LT   LT(_FN, KC_TAB), LT(_NUM, KC_SPC)
 
 #define _PRSTEN_R1   KC_Q,             KC_L,            KC_U,          KC_Y,          KC_QUOT
 #define _PRSTEN_R2   KC_M,             RGUI_T(KC_N),    RSFT_T(KC_A),  RCTL_T(KC_I),  RALT_T(KC_O)
 #define _PRSTEN_R3   ZK_SEMI,          KC_J,            KC_K,          KC_Z,          ZK_COLON
-#define _PRSTEN_RT   LT(_SYM, KC_E),   LT(_FN, KC_ENT)
+#define _PRSTEN_RT   LT(_SYM, KC_E),   LT(_NAV, KC_ENT)
 
 /*
  * STENAI Features:
@@ -113,19 +113,19 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *   ╚═══════╩═══════╩═══════╬═══════╬═══════╣         ╠═══════╬═══════╬═══════╩═══════╩═══════╝
  *                           ║       ║       ║         ║       ║       ║
  *                           ║  TAB  ║  SPC  ║         ║   E   ║ INTRO ║
- *                           ║  num  ║  nav  ║         ║  sym  ║   fn  ║
+ *                           ║   fn  ║  num  ║         ║  sym  ║  nav  ║
  *                           ╚═══════╩═══════╝         ╚═══════╩═══════╝
  *
  */
 #define _STENAI_L1   KC_GRV,           KC_W,            KC_D,          KC_P,          KC_F
 #define _STENAI_L2   LALT_T(KC_H),     LCTL_T(KC_R),    LSFT_T(KC_S),  LGUI_T(KC_T),  KC_G
 #define _STENAI_L3   KC_X,             KC_C,            KC_V,          KC_B,          KC_SLSH
-#define _STENAI_LT   LT(_NUM, KC_TAB), LT(_NAV, KC_SPC)
+#define _STENAI_LT   LT(_FN, KC_TAB), LT(_NUM, KC_SPC)
 
 #define _STENAI_R1   KC_Q,             KC_L,            KC_U,          KC_Y,          KC_QUOT
 #define _STENAI_R2   KC_M,             RGUI_T(KC_N),    RSFT_T(KC_A),  RCTL_T(KC_I),  RALT_T(KC_O)
 #define _STENAI_R3   ZK_SEMI,          KC_J,            KC_K,          KC_Z,          ZK_COLON
-#define _STENAI_RT   LT(_SYM, KC_E),   LT(_FN, KC_ENT)
+#define _STENAI_RT   LT(_SYM, KC_E),   LT(_NAV, KC_ENT)
 
 /*
  * QWERTY Layer
@@ -148,7 +148,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *   ╚═══════╩═══════╩═══════╬═══════╬═══════╣         ╠═══════╬═══════╬═══════╩═══════╩═══════╝
  *                           ║       ║       ║         ║       ║       ║
  *                           ║  TAB  ║  SPC  ║         ║  SPC  ║ INTRO ║
- *                           ║  num  ║  nav  ║         ║  sym  ║   fn  ║
+ *                           ║   fn  ║  num  ║         ║  sym  ║  nav  ║
  *                           ╚═══════╩═══════╝         ╚═══════╩═══════╝
  *
  */
@@ -156,12 +156,43 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define _QWERTY_L1   KC_Q,    KC_W,    KC_E,    KC_R,    KC_T
 #define _QWERTY_L2   LALT_T(KC_A),     LCTL_T(KC_S),    LSFT_T(KC_D),  LGUI_T(KC_F),  KC_G
 #define _QWERTY_L3   KC_Z,    KC_X,    KC_C,    KC_V,    KC_B
-#define _QWERTY_LT   LT(_NUM, KC_TAB), LT(_NAV, KC_SPC)
+#define _QWERTY_LT   LT(_FN, KC_TAB), LT(_NUM, KC_SPC)
 
 #define _QWERTY_R1   KC_Y,    KC_U,    KC_I,    KC_O,    KC_P
 #define _QWERTY_R2   KC_H,    RGUI_T(KC_J),    RSFT_T(KC_K),  RCTL_T(KC_L), RALT_T(KC_QUOT)
 #define _QWERTY_R3   KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_GRV
-#define _QWERTY_RT   LT(_SYM, KC_SPC), LT(_FN, KC_ENT)
+#define _QWERTY_RT   LT(_SYM, KC_SPC), LT(_NAV, KC_ENT)
+
+/*
+ * FUNCTION KEYS Layer
+ *
+ *   ╔═══════╦═══════╦═══════╦═══════╦═══════╗         ╔═══════╦═══════╦═══════╦═══════╦═══════╗
+ *   ║       ║       ║       ║       ║       ║         ║       ║       ║       ║       ║       ║
+ *   ║       ║       ║       ║       ║       ║         ║       ║  F7   ║   F8  ║   F9  ║  F10  ║
+ *   ║       ║       ║       ║       ║       ║         ║       ║       ║       ║       ║       ║
+ *   ╠═══════╬═══════╬═══════╬═══════╬═══════╣         ╠═══════╬═══════╬═══════╬═══════╬═══════╣
+ *   ║       ║       ║       ║       ║       ║         ║       ║       ║       ║       ║       ║
+ *   ║       ║       ║       ║       ║       ║         ║       ║  F1   ║   F2  ║   F3  ║  F11  ║
+ *   ║       ║       ║       ║       ║       ║         ║       ║       ║       ║       ║       ║
+ *   ╠═══════╬═══════╬═══════╬═══════╬═══════╣         ╠═══════╬═══════╬═══════╬═══════╬═══════╣
+ *   ║       ║       ║       ║       ║       ║         ║       ║       ║       ║       ║       ║
+ *   ║       ║       ║       ║       ║       ║         ║       ║  F4   ║   F5  ║   F6  ║  F12  ║
+ *   ║       ║       ║       ║       ║       ║         ║       ║       ║       ║       ║       ║
+ *   ╚═══════╩═══════╩═══════╬═══════╬═══════╣         ╠═══════╬═══════╬═══════╩═══════╩═══════╝
+ *                           ║▒▒▒▒▒▒▒║       ║         ║       ║       ║
+ *                           ║▒▒FNC▒▒║       ║         ║       ║  BACK ║
+ *                           ║▒▒▒▒▒▒▒║       ║         ║       ║       ║
+ *                           ╚═══════╩═══════╝         ╚═══════╩═══════╝
+ */
+#define ____FN_L1    _BLANK_ROW
+#define ____FN_L2    _BLANK_ROW
+#define ____FN_L3    _BLANK_ROW
+#define ____FN_LT    _BLANK_THUMB
+
+#define ____FN_R1    _______,  KC_F7,  KC_F8,  KC_F9,  KC_F10
+#define ____FN_R2    _______,  KC_F1,  KC_F2,  KC_F3,  KC_F11
+#define ____FN_R3    _______,  KC_F4,  KC_F5,  KC_F6,  KC_F12
+#define ____FN_RT    _______,  KC_BSPC
 
 /*
  * NUM Layer
@@ -179,9 +210,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *   ║       ║   /   ║   *   ║       ║       ║         ║       ║   4   ║   5   ║   6   ║       ║
  *   ║       ║       ║       ║       ║       ║         ║       ║       ║       ║       ║       ║
  *   ╚═══════╩═══════╩═══════╬═══════╬═══════╣         ╠═══════╬═══════╬═══════╩═══════╩═══════╝
- *                           ║▒▒▒▒▒▒▒║       ║         ║       ║       ║
- *                           ║▒▒NUM▒▒║       ║         ║   0   ║  BACK ║
- *                           ║▒▒▒▒▒▒▒║       ║         ║       ║       ║
+ *                           ║       ║▒▒▒▒▒▒▒║         ║       ║       ║
+ *                           ║       ║▒▒NUM▒▒║         ║   0   ║  DEL  ║
+ *                           ║       ║▒▒▒▒▒▒▒║         ║       ║       ║
  *                           ╚═══════╩═══════╝         ╚═══════╩═══════╝
  *
  */
@@ -193,43 +224,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define ____NUM_R1   _______, KC_7,    KC_8,    KC_9,    _______
 #define ____NUM_R2   _______, KC_1,    KC_2,    KC_3,    _______
 #define ____NUM_R3   _______, KC_4,    KC_5,    KC_6,    _______
-#define ____NUM_RT   KC_0,    KC_BSPC
-
-/*
- * NAVIGATION Layer
- *
- * Media is a tap dance ala iTunes:
- * - 1 play/resume
- * - 2 fwd
- * - 3 back
- *
- *   ╔═══════╦═══════╦═══════╦═══════╦═══════╗         ╔═══════╦═══════╦═══════╦═══════╦═══════╗
- *   ║       ║       ║       ║       ║       ║         ║       ║       ║       ║       ║       ║
- *   ║       ║       ║       ║       ║       ║         ║  WHDN ║  HOME ║   UP  ║  PGUP ║       ║
- *   ║       ║       ║       ║       ║       ║         ║       ║       ║       ║       ║       ║
- *   ╠═══════╬═══════╬═══════╬═══════╬═══════╣         ╠═══════╬═══════╬═══════╬═══════╬═══════╣
- *   ║       ║       ║       ║       ║       ║         ║       ║       ║       ║       ║       ║
- *   ║       ║       ║       ║       ║       ║         ║  WHUP ║  LF   ║   DN  ║  RG   ║       ║
- *   ║       ║       ║       ║       ║       ║         ║       ║       ║       ║       ║       ║
- *   ╠═══════╬═══════╬═══════╬═══════╬═══════╣         ╠═══════╬═══════╬═══════╬═══════╬═══════╣
- *   ║       ║       ║       ║       ║       ║         ║       ║       ║       ║       ║       ║
- *   ║       ║       ║       ║       ║       ║         ║       ║  END  ║ MEDIA ║  PGDN ║       ║
- *   ║       ║       ║       ║       ║       ║         ║       ║       ║       ║       ║       ║
- *   ╚═══════╩═══════╩═══════╬═══════╬═══════╣         ╠═══════╬═══════╬═══════╩═══════╩═══════╝
- *                           ║       ║▒▒▒▒▒▒▒║         ║       ║       ║
- *                           ║       ║▒▒NAV▒▒║         ║       ║  DEL  ║
- *                           ║       ║▒▒▒▒▒▒▒║         ║       ║       ║
- *                           ╚═══════╩═══════╝         ╚═══════╩═══════╝
- */
-#define ____NAV_L1   _BLANK_ROW
-#define ____NAV_L2   _BLANK_ROW
-#define ____NAV_L3   _BLANK_ROW
-#define ____NAV_LT   _BLANK_THUMB
-
-#define ____NAV_R1   KC_WH_D, KC_HOME, KC_UP,   KC_PGUP, _______
-#define ____NAV_R2   KC_WH_U, KC_LEFT, KC_DOWN, KC_RGHT, _______
-#define ____NAV_R3   _______, KC_END,  ZK_MEDIA, KC_PGDN, _______
-#define ____NAV_RT   _______, KC_DEL
+#define ____NUM_RT   KC_0,    KC_DEL
 
 /*
  * SYMBOLS Layer
@@ -263,35 +258,40 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define ____SYM_RT   _BLANK_THUMB
 
 /*
- * FUNCTION KEYS Layer
+ * NAVIGATION Layer
+ *
+ * Media is a tap dance ala iTunes:
+ * - 1 play/resume
+ * - 2 fwd
+ * - 3 back
  *
  *   ╔═══════╦═══════╦═══════╦═══════╦═══════╗         ╔═══════╦═══════╦═══════╦═══════╦═══════╗
  *   ║       ║       ║       ║       ║       ║         ║       ║       ║       ║       ║       ║
- *   ║       ║       ║       ║       ║       ║         ║       ║  F7   ║   F8  ║   F9  ║  F10  ║
+ *   ║       ║       ║       ║       ║       ║         ║  WHDN ║  HOME ║   UP  ║  PGUP ║       ║
  *   ║       ║       ║       ║       ║       ║         ║       ║       ║       ║       ║       ║
  *   ╠═══════╬═══════╬═══════╬═══════╬═══════╣         ╠═══════╬═══════╬═══════╬═══════╬═══════╣
  *   ║       ║       ║       ║       ║       ║         ║       ║       ║       ║       ║       ║
- *   ║       ║       ║       ║       ║       ║         ║       ║  F1   ║   F2  ║   F3  ║  F11  ║
+ *   ║       ║       ║       ║       ║       ║         ║  WHUP ║  LF   ║   DN  ║  RG   ║       ║
  *   ║       ║       ║       ║       ║       ║         ║       ║       ║       ║       ║       ║
  *   ╠═══════╬═══════╬═══════╬═══════╬═══════╣         ╠═══════╬═══════╬═══════╬═══════╬═══════╣
  *   ║       ║       ║       ║       ║       ║         ║       ║       ║       ║       ║       ║
- *   ║       ║       ║       ║       ║       ║         ║       ║  F4   ║   F5  ║   F6  ║  F12  ║
+ *   ║       ║       ║       ║       ║       ║         ║       ║  END  ║ MEDIA ║  PGDN ║       ║
  *   ║       ║       ║       ║       ║       ║         ║       ║       ║       ║       ║       ║
  *   ╚═══════╩═══════╩═══════╬═══════╬═══════╣         ╠═══════╬═══════╬═══════╩═══════╩═══════╝
  *                           ║       ║       ║         ║       ║▒▒▒▒▒▒▒║
- *                           ║       ║  ESC  ║         ║       ║▒▒FNC▒▒║
+ *                           ║       ║       ║         ║       ║▒▒NAV▒▒║
  *                           ║       ║       ║         ║       ║▒▒▒▒▒▒▒║
  *                           ╚═══════╩═══════╝         ╚═══════╩═══════╝
  */
-#define ____FN_L1    _BLANK_ROW
-#define ____FN_L2    _BLANK_ROW
-#define ____FN_L3    _BLANK_ROW
-#define ____FN_LT    _______, KC_ESC
+#define ____NAV_L1   _BLANK_ROW
+#define ____NAV_L2   _BLANK_ROW
+#define ____NAV_L3   _BLANK_ROW
+#define ____NAV_LT   _BLANK_THUMB
 
-#define ____FN_R1    _______,  KC_F7,  KC_F8,  KC_F9,  KC_F10
-#define ____FN_R2    _______,  KC_F1,  KC_F2,  KC_F3,  KC_F11
-#define ____FN_R3    _______,  KC_F4,  KC_F5,  KC_F6,  KC_F12
-#define ____FN_RT    _BLANK_THUMB
+#define ____NAV_R1   KC_WH_D, KC_HOME, KC_UP,   KC_PGUP, _______
+#define ____NAV_R2   KC_WH_U, KC_LEFT, KC_DOWN, KC_RGHT, _______
+#define ____NAV_R3   _______, KC_END,  ZK_MEDIA, KC_PGDN, _______
+#define ____NAV_RT   _BLANK_THUMB
 
 
 /*

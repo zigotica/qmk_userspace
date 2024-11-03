@@ -21,10 +21,10 @@ enum userspace_layers {
     _PRSTEN = 0,
     _STENAI,
     _QWERTY,
-    _NUM,
-    _NAV,
-    _SYM,
     _FN,
+    _NUM,
+    _SYM,
+    _NAV,
     _SETUP,
 };
 #else

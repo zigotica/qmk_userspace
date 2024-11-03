@@ -58,20 +58,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        ____LORTH, _QWERTY_LT,    ____BARRS,   _QWERTY_RT,    ____RORTH
     ),
 
+    [_FN] = LAYOUT_wrapper(
+      _______,    ____FN_15,     _BLANK_3,    ____FN_60,     _______,
+      _______,    ____FN_L1,     _BLANK_3,    ____FN_R1,     _______,
+      _______,    ____FN_L2,     _BLANK_3,    ____FN_R2,     _______,
+      _______,    ____FN_L3,     _BLANK_3,    ____FN_R3,     _______,
+      _BLANK_4,   ____FN_LT,     _BLANK_3,    ____FN_RT,     _BLANK_4
+    ),
+
     [_NUM] = LAYOUT_wrapper(
       _______,    _BLANK_ROW,    _BLANK_3,    _BLANK_ROW,    _______,
       _______,    ____NUM_L1,    _BLANK_3,    ____NUM_R1,    _______,
       _______,    ____NUM_L2,    _BLANK_3,    ____NUM_R2,    _______,
       _______,    ____NUM_L3,    _BLANK_3,    ____NUM_R3,    _______,
       _BLANK_4,   ____NUM_LT,    _BLANK_3,    ____NUM_RT,    _BLANK_4
-    ),
-
-    [_NAV] = LAYOUT_wrapper(
-      _______,    _BLANK_ROW,    _BLANK_3,    _BLANK_ROW,    _______,
-      _______,    ____NAV_L1,    _BLANK_3,    ____NAV_R1,    _______,
-      _______,    ____NAV_L2,    _BLANK_3,    ____NAV_R2,    _______,
-      _______,    ____NAV_L3,    _BLANK_3,    ____NAV_R3,    _______,
-      _BLANK_4,   ____NAV_LT,    _BLANK_3,    ____NAV_RT,    _BLANK_4
     ),
 
     [_SYM] = LAYOUT_wrapper(
@@ -82,12 +82,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       _BLANK_4,   ____SYM_LT,    _BLANK_3,    ____SYM_RT,    _BLANK_4
     ),
 
-    [_FN] = LAYOUT_wrapper(
-      _______,    ____FN_15,     _BLANK_3,    ____FN_60,     _______,
-      _______,    ____FN_L1,     _BLANK_3,    ____FN_R1,     _______,
-      _______,    ____FN_L2,     _BLANK_3,    ____FN_R2,     _______,
-      _______,    ____FN_L3,     _BLANK_3,    ____FN_R3,     _______,
-      _BLANK_4,   ____FN_LT,     _BLANK_3,    ____FN_RT,     _BLANK_4
+    [_NAV] = LAYOUT_wrapper(
+      _______,    _BLANK_ROW,    _BLANK_3,    _BLANK_ROW,    _______,
+      _______,    ____NAV_L1,    _BLANK_3,    ____NAV_R1,    _______,
+      _______,    ____NAV_L2,    _BLANK_3,    ____NAV_R2,    _______,
+      _______,    ____NAV_L3,    _BLANK_3,    ____NAV_R3,    _______,
+      _BLANK_4,   ____NAV_LT,    _BLANK_3,    ____NAV_RT,    _BLANK_4
     ),
 
     [_SETUP] = LAYOUT_wrapper(
