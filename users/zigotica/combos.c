@@ -25,6 +25,10 @@ enum combos {
     COMBO_EQUAL,
     COMBO_SLSH,
     COMBO_ASTR,
+    COMBO_F,
+    COMBO_Q,
+    COMBO_SLSHQSTN,
+    COMBO_COMMA,
 };
 
 const uint16_t PROGMEM combo_email[] = {LT(_SYM, KC_E), KC_M, COMBO_END};
@@ -38,6 +42,10 @@ const uint16_t PROGMEM combo_plus[] = {RSFT_T(KC_A), KC_U, COMBO_END};
 const uint16_t PROGMEM combo_equal[] = {RCTL_T(KC_I), KC_Y, COMBO_END};
 const uint16_t PROGMEM combo_slsh[] = {RGUI_T(KC_N), KC_J, COMBO_END};
 const uint16_t PROGMEM combo_astr[] = {RSFT_T(KC_A), KC_K, COMBO_END};
+const uint16_t PROGMEM combo_f[] = {KC_C, KC_D, COMBO_END};
+const uint16_t PROGMEM combo_q[] = {KC_L, KC_U, COMBO_END};
+const uint16_t PROGMEM combo_slshqstn[] = {KC_V, KC_B, COMBO_END};
+const uint16_t PROGMEM combo_comma[] = {KC_J, KC_K, COMBO_END};
 
 combo_t key_combos[] = {
     [COMBO_EMAIL] = COMBO_ACTION(combo_email),
@@ -51,6 +59,10 @@ combo_t key_combos[] = {
     [COMBO_EQUAL] = COMBO(combo_equal, KC_EQUAL),
     [COMBO_SLSH] = COMBO(combo_slsh, KC_SLSH),
     [COMBO_ASTR] = COMBO(combo_astr, KC_ASTR),
+    [COMBO_F] = COMBO(combo_f, KC_F),
+    [COMBO_Q] = COMBO(combo_q, KC_Q),
+    [COMBO_SLSHQSTN] = COMBO(combo_slshqstn, KC_SLSH),
+    [COMBO_COMMA] = COMBO(combo_comma, ZK_SEMI),
 };
 
 void process_combo_event(uint16_t index, bool pressed) {
