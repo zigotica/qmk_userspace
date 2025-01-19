@@ -248,12 +248,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *                           ╚═══════╩═══════╝         ╚═══════╩═══════╝
  */
 #define ____SYM_L1   _______, KC_CIRC, KC_HASH, KC_DLR, A(S(KC_2))
-#define ____SYM_L2   _______, KC_AT,   KC_COLN, KC_SCLN, A(S(KC_8))
-#define ____SYM_L3   _______, _______, KC_EXLM, KC_QUES, A(KC_QUES)
+#define ____SYM_L2   KC_GRV,  KC_DQUO, KC_COLN, KC_SCLN, A(S(KC_8))
+#define ____SYM_L3   _______, KC_AT,   KC_EXLM, KC_QUES, A(KC_QUES)
 #define ____SYM_LT   _______, KC_ESC
 
 #define ____SYM_R1   _______, KC_PIPE, KC_AMPR, KC_PERC, _______
-#define ____SYM_R2   A(S(KC_9)), KC_UNDS, KC_COMM, KC_DOT, KC_DQUO
+#define ____SYM_R2   A(S(KC_9)), KC_UNDS, KC_COMM, KC_DOT, KC_QUOT
 #define ____SYM_R3   _______, KC_BSLS, KC_LT,   KC_GT,  _______
 #define ____SYM_RT   _BLANK_THUMB
 
